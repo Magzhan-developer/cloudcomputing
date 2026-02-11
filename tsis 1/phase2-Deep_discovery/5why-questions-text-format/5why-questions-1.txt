@@ -1,0 +1,21 @@
+Why does the procurement contract approval process take so long at Kaspi?
+
+"So long," you say. I hear this phrase ten times a week. From Product Managers, from the Head of Innovation, from vendors. Everyone wants their contract signed yesterday.
+
+Let me explain to you exactly why it takes two to three weeks, and why I will not apologize for it.
+
+1. We are a Bank, not a Startup You see "Kaspi" and think "Super App." I see "License No. 1.2.245/61." If I approve a contract that allows a vendor to process our customer data on a server that isn't physically located in Kazakhstan (or doesn't have a copy here), we violate the Law on Personal Data and Protection. If I miss one clause where a vendor claims rights to "derivative data" generated from our transactions, we violate Banking Secrecy laws. The National Bank does not care if we shipped a feature on time. They care if we protected the data. I read every line because I have to.
+
+2. The "Standard Contract" Trap Big tech vendors—AWS, Salesforce, Microsoft—they send us their "Standard Global Terms." They think, "Take it or leave it." But their "Standard" terms usually say disputes are settled in London or New York. Our Risk team says absolutely not. Their "Standard" liability cap is usually $10,000. For a bank processing billions of Tenge? That is a joke. So we enter "redline hell." I send changes. They say legal has to review. Two weeks pass. We argue over a single indemnification clause. It is exhausting, but necessary.
+
+3. The Internal Coordination Nightmare I am not the only one who has to say "yes." I have to chase:
+
+InfoSec: To review the vendor's SOC2 report and penetration tests.
+Legal: To check the jurisdiction and governing law.
+Compliance: To check for sanctions (we cannot pay a vendor with Russian beneficiaries right now without triple-checking).
+Budgeting: To ensure the cost center code is correct.
+Use your imagination: getting four different departments to agree on one document is like herding cats. And I am the one holding the cat food.
+
+4. My Personal Liability At the end of the day, my digital signature is on that approval. If there is a data breach and it turns out the contract didn't have a strong enough penalty clause, I am the one answering to the Board. Not the AI, and certainly not the Product Manager who just wanted to launch their feature.
+
+So, it takes time because safety takes time. Do you have a suggestion for how to make it faster without putting our banking license at risk? I am all ears.

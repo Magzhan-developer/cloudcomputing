@@ -1,0 +1,15 @@
+Why is making a compliance mistake such a serious concern for you personally?
+
+You ask why I take this personally?
+
+Because in Kazakhstan, banking compliance isn't just a corporate policy. It's the law. And for someone in my position, it can be... career-ending. Or worse.
+
+Let me be blunt.
+
+1. Personal Accountability When I sign off on a vendor due diligence report, I am attesting that I have verified their compliance. If the National Bank audits us and finds a violation—say, we used a cloud provider that doesn't have local backups—they don't just fine Kaspi. They look at who authorized it. My name is on that paper. I could be blacklisted from working in the financial sector. Eight years of building my reputation, my career, my expertise—gone. Overnight. I have a family. I cannot afford to be unemployable in my own industry.
+
+2. The "Kaspi Standards" We are not just any bank. We are Kaspi. We set the standard for digital banking in this country. We are trusted by millions of Kazakhstanis. My grandmother uses Kaspi. My neighbors use Kaspi. If I let a vendor through who leaks data, or who acts unethically, or who causes an outage because I didn't check their SLA... I am betraying that trust. It sounds dramatic, I know. But when you are the market leader, everyone is watching. One mistake becomes a national headline. "Kaspi Data Breach." I will not let that happen on my watch.
+
+3. The Complexity of the Law The laws here are not static. The Law on Personal Data. The Rules on Information Security for Second-Tier Banks. They change. They are interpreted differently by different regulators. If I make a mistake, it’s not always a clear "oops." It’s often a "gray area" that turned black. Did I interpret "cross-border data transfer" correctly for this specific SaaS tool? Did I classify "telemetry data" as "personal data"? If I get it wrong, the regulator doesn't care that it was complicated. They care that I got it wrong.
+
+So yes. I am scared. Every time I approve a contract, there is a small voice in the back of my head asking: "Did you miss something?" That is why I check everything three times. That is why I work late. Because the alternative is unacceptable.

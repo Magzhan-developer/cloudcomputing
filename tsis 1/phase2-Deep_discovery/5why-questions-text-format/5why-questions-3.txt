@@ -1,0 +1,20 @@
+Why don’t existing internal systems or legal templates reduce this workload effectively?
+
+We have systems. We have document repositories, procurement portals, risk registers. We have SharePoint for days.
+
+But let me tell you why they don't actually help me review a contract.
+
+1. The "Square Peg, Round Hole" Problem Our internal templates are designed for a perfect world. They assume every vendor is a Kazakhstani LLP following local law. But 80% of what I buy comes from global tech giants. AWS, Google, Salesforce, Atlassian. They hand me a "Master Service Agreement" under English Law or Delaware Law. Our templates? Irrelevant. I can't just copy-paste their text into our template. I have to read their document and figure out where it conflicts with our policies. No system does that mapping for me.
+
+2. Distributed Knowledge, Isolated Systems Legal knows about jurisdiction. Risk knows about liability caps. InfoSec knows about encryption standards. Where is this knowledge stored?
+
+Legal: In a shared drive folder of "Approved Clauses 2024".
+Risk: In an Excel file called "Vendor Risk Matrix v9_FINAL".
+InfoSec: In a separate GRC (Governance, Risk, Complaince) tool.
+When I review a contract, I have to open all three. I have to check the jurisdiction against Legal's folder. Then I have to check the liability cap against the Risk matrix. Then I have to check the security addendum against the InfoSec tool. There is no "One System" that says: "Assel, this contract has a liability cap of $50k, but for a Tier 1 vendor, Risk requires $1M. Flag this." I am the integration engine. My brain is the API connecting these isolated systems.
+
+3. "Digital" Process, Analog Thinking We have a specialized procurement workflow tool. It's very fancy. It has routing, approvals, audit trails. Do you know what it actually does? It moves a PDF from one inbox to another. It doesn't read the PDF. It doesn't highlight risky clauses. It just says: "Assel, you have a task." So I open the task, download the PDF, read it manually, mark it up in Word, upload it back. The "system" adds zero intelligence. It just adds administrative overhead.
+
+4. The "Update Lag" Regulations change. The National Bank issues a new decree on cloud computing. Who updates the templates? Legal. When? "Eventually." Who updates the procurement system logic? IT. When? "In the next sprint" (which means never). Who has to know the new rule today to avoid a fine? Me. I cannot wait for the system to catch up. I have to carry the new rules in my head.
+
+So, in summary: systems manage the flow of documents, but they do nothing to manage the content or the risk. That is still 100% on me.

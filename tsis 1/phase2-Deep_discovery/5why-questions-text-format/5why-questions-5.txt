@@ -1,0 +1,23 @@
+Why hasn’t a system been built to safely support you in these decisions?
+
+You want to know the truth?
+
+Because nobody cares about the "back office" until the building is on fire.
+
+Look at our Super App. It is a masterpiece. It is fast, beautiful, intuitive. We have hundreds of engineers working on making it easier for you to buy groceries or pay your bills. That is where the money is. That is where the glory is.
+
+But me? I am a cost center. I am "overhead."
+
+Reason 1: The "Local Context" Problem The big software companies—SAP, Oracle, the legal tech startups—they build for America. They build for Europe. They know GDPR. They know California privacy laws. They do not know the specific, changing decrees of the National Bank of Kazakhstan. They do not understand that a "data processor" in Almaty is treated differently than one in Astana under specific conditions. To build a system that actually understands our local laws, we would have to build it ourselves. And see point #1: our engineers are busy building the next big feature for the Super App.
+
+Reason 2: The "Liability Void" If a vendor sells me a "Compliance Checker" tool, do you know what the first line of their contract says? "This tool is for informational purposes only and does not constitute legal advice." They wash their hands of it. If the tool says "Green Light" and it turns out to be "Red Light," they are not liable. I am. Why would I use a system that takes credit for speed but accepts zero responsibility for safety? It is a bad trade for me.
+
+Reason 3: The "Too Hard" Basket It is easy to build a workflow tool ("Send PDF from Assel to Legal"). It is incredibly hard to build a reasoning tool ("Read this indemnity clause, compare it to the Law on Banking Secrecy, cross-reference it with the vendor's ISO 27001 certificate, and tell me if the risk is acceptable"). That requires judgment. That requires nuance. Most developers look at what I do, see the mess of conflicting regulations and "gray areas," and run away. They say, "That's not code-able. That's human intuition."
+
+So here I am. I am the "Human in the Loop." Or rather, I am the Loop.
+
+Pauses.
+
+But... if you could build something that didn't just give me a "score," but actually showed me the proof... "Assel, this clause violates Article 12 because of specific reason X, citing National Bank Rule Y..." ...and if it was specifically trained on our laws, not just US laws...
+
+I might listen. Do you have something that can actually do that? Or are you just collecting "pain points" for another PowerPoint presentation?
