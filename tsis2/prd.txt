@@ -1,0 +1,6 @@
+Write a function filter_and_sort(numbers) that:
+1. Takes a list of integers.
+2. Removes all negative numbers.
+3. Sorts the remaining numbers in ascending order.
+4. Raises ValueError if input is not a list.
+5. Raises ValueError if any element in the list is not an integer.
