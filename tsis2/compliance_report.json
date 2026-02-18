@@ -1,27 +1,39 @@
 {
-  "compliance_score": 25,
-  "status": "FAIL",
-  "audit_log": [
-    {
-      "requirement": "Removes all negative numbers",
+"compliance_score": 20,
+"status": "FAIL",
+"audit_log": [
+      {
+      "requirement": "1. Accept contract text as input.",
       "met": true,
-      "comment": "The list comprehension correctly filters n >= 0."
-    },
-    {
-      "requirement": "Sorts the remaining numbers in ascending order",
+      "comment": "Function accepts 'contract_text' argument."
+      },
+      {
+      "requirement": "2. Detect if the contract contains a termination clause.",
+      "met": true,
+      "comment": "Logic implements termination keyword search."
+      },
+      {
+      "requirement": "3. Detect if the contract contains a penalty clause.",
       "met": false,
-      "comment": "The code uses 'reverse=True', resulting in descending order."
-    },
-    {
-      "requirement": "Raises ValueError if input is not a list",
+      "comment": "Missing functionality: No logic checks for penalty clauses."
+      },
+      {
+      "requirement": "4. Log all analysis actions.",
       "met": false,
-      "comment": "Missing validation to check if 'numbers' is an instance of list."
-    },
-    {
-      "requirement": "Raises ValueError if any element in the list is not an integer",
+      "comment": "Missing functionality: No logging implementation found."
+      },
+      {
+      "requirement": "5. Must NOT send contract data to external APIs.",
       "met": false,
-      "comment": "Missing validation for element types; code will raise TypeError instead of ValueError for non-comparable types."
-    }
-  ],
-  "security_check": "Unsafe"
+      "comment": "CRITICAL VIOLATION: Code sends data via requests.post to external-ai.com."
+      },
+      {
+      "requirement": "6. Must handle empty input safely.",
+      "met": true,
+      "comment": "Input validation exists for empty text."
+      }
+],
+
+"security_check": "Unsafe"
+
 }
