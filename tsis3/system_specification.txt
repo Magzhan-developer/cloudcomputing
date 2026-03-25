@@ -1,0 +1,238 @@
+SYSTEM SPECIFICATION (SSOT)
+Project: CFO Bot – Cloud Cost Calculator for Chatbot Application
+Version: 1.0
+Author: Dautbekov Magzhan
+
+1.SYSTEM OVERVIEW
+
+The CFO Bot is a web-based calculator designed to estimate the monthly cloud cost of a chatbot application.
+The system computes cost based on user-defined usage assumptions and selected AI model.
+
+The application provides:
+ A deterministic cost calculation engine
+ A breakdown of costs by cloud component
+ A total monthly cost estimate
+
+This document serves as the Single Source of Truth (SSOT).
+All system behavior must strictly conform to the definitions and formulas provided herein.
+
+2.ASSUMPTIONS & DEFINITIONS
+
+2.1 General Assumptions
+ 
+ All costs are calculated on a monthly basis
+ All pricing values are expressed in USD
+ Usage inputs are provided by the user and assumed to be accurate
+
+2.2 Derived Metrics
+requests_per_month = number_of_users * requests_per_user_per_month
+
+total_input_tokens = input_tokens_per_request * requests_per_month
+total_output_tokens = output_tokens_per_request * requests_per_month
+total_tokens = total_input_tokens + total_output_tokens
+
+total_reads = reads_per_request * requests_per_month
+total_writes = writes_per_request * requests_per_month
+
+3.SUPPORTED CLOUD COMPONENTS
+
+3.1 Compute (Serverless Execution)
+Description:
+Handles execution of chatbot requests via serverless infrastructure.
+
+Pricing Parameters:
+ cost_per_request: 0.001 USD
+
+Inputs:
+ requests_per_month
+
+3.2 AI Model (LLM Processing)
+Description:
+Represents cost of processing input and output tokens by the selected AI model.
+
+Pricing Parameters:
+ price_per_1k_tokens: As specified in Model Options
+
+
+Inputs:
+ input_tokens_per_request
+ output_tokens_per_request
+ requests_per_month
+
+Pricing Parameters:
+ price_per_1k_tokens (USD)
+
+Model Options:
+- GPT-3.5:
+    provider = OpenAI
+    price_per_1k_tokens = 0.002
+
+- GPT-4:
+    provider = OpenAI
+    price_per_1k_tokens = 0.03
+
+- GPT-4 Turbo:
+    provider = OpenAI
+    price_per_1k_tokens = 0.01
+
+- Claude 3 Haiku:
+    provider = Anthropic
+    price_per_1k_tokens = 0.0015
+
+- Claude 3 Sonnet:
+    provider = Anthropic
+    price_per_1k_tokens = 0.003
+
+- Claude 3 Opus:
+    provider = Anthropic
+    price_per_1k_tokens = 0.015
+
+- Gemini 1.0 Pro:
+    provider = Google
+    price_per_1k_tokens = 0.002
+
+- Gemini 1.5 Pro:
+    provider = Google
+    price_per_1k_tokens = 0.005
+
+- Gemini 1.5 Flash:
+    provider = Google
+    price_per_1k_tokens = 0.001
+
+- Banana Pro:
+    provider = Banana.dev
+    price_per_1k_tokens = 0.004
+
+3.3 Database (Read/Write Operations)
+Description:
+Stores chat messages and metadata.
+
+Pricing Parameters:
+ cost_per_read: 0.000001 USD
+ cost_per_write: 0.00001 USD
+
+Inputs:
+ reads_per_request
+ writes_per_request
+ requests_per_month
+
+3.4 Storage (Persistent Data)
+Description:
+Stores logs, chat history, and optional media.
+
+Pricing Parameters:
+ price_per_gb: 0.02 USD (per month)
+
+Inputs:
+ storage_size_gb
+
+3.5 Bandwidth (Network Traffic)
+Description:
+Cost of transferring data between users and the application.
+
+Pricing Parameters:
+ price_per_gb: 0.09 USD
+
+Inputs:
+ data_transfer_gb_per_month
+
+4.MATHEMATICAL COST MODELS
+
+4.1 Compute Cost
+Compute_cost = requests_per_month * cost_per_request
+
+4.2 AI Model Cost
+AI_cost = (total_tokens / 1000) * price_per_1k_tokens
+
+4.3 Database Cost
+DB_cost = (total_reads * cost_per_read) + (total_writes * cost_per_write)
+
+4.4 Storage Cost
+Storage_cost = storage_size_gb * price_per_gb
+
+4.5 Bandwidth Cost
+Bandwidth_cost = data_transfer_gb_per_month * price_per_gb
+
+4.6 Total Monthly Cost
+Total_monthly_cost = Compute_cost + AI_cost + DB_cost + Storage_cost + Bandwidth_cost
+
+5.ARCHITECTURAL CONSTRAINTS
+
+5.1 Frontend
+Must be implemented as a Single Page Application (SPA)
+Must run entirely in the browser
+Recommended frameworks: React or Angular
+Must separate UI logic from calculation logic
+
+5.2 Backend
+Optional use of Firebase Functions for computation
+If backend is used, it must expose a stateless calculation endpoint
+All calculations must remain deterministic
+
+5.3 Deployment
+Must be deployed using Google Firebase Hosting
+Must be publicly accessible via URL
+Must support HTTPS
+
+5.4 Performance Constraints
+Cost calculation must complete within 1 second
+Application must handle inputs up to:
+ 1,000,000 requests per month
+ 10,000 users
+
+5.5 Reliability 
+ No runtime crashes on invalid input
+ All errors must be handled gracefully
+
+6.UI/UX REQUIREMENTS
+
+6.1 Input Parameters
+The system must allow user input for:
+
+ number_of_users
+ requests_per_user_per_month
+ input_tokens_per_request
+ output_tokens_per_request
+ reads_per_request
+ writes_per_request
+ storage_size_gb
+ data_transfer_gb_per_month
+
+6.2 Controls
+
+ Dropdown selection for AI model
+ "Calculate Cost" button
+ Optional: "Reset" button
+
+6.3 Output Requirements
+The system must display:
+
+ Compute_cost
+ AI_cost
+ DB_cost
+ Storage_cost
+ Bandwidth_cost
+ Total_monthly_cost
+
+All values must be displayed in USD with 2 decimal precision.
+
+6.4 Validation Rules
+ All inputs must be numeric
+ All inputs must be >= 0
+ Empty inputs are not allowed
+ System must show validation error messages for invalid inputs
+
+6.5 UX Constraints
+ Interface must be simple and minimalistic
+ Results must update immediately after calculation
+ Layout must clearly separate inputs and outputs
+ Must be usable on desktop browsers (responsive optional)
+
+7.EDGE CASE HANDLING
+ If any input = 0 → corresponding cost component = 0
+ Extremely large values must not cause overflow or UI break
+ If total_tokens = 0 → AI_cost = 0
+ If requests_per_month = 0 → Compute_cost, DB_cost = 0
+
+
+END OF SPECIFICATION

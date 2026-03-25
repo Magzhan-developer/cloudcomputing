@@ -1,0 +1,49 @@
+Using the provided System Specification (SSOT), Implementation Plan, and Test Specifications, generate a fully functional web application for the CFO Bot – Cloud Cost Calculator.
+
+Requirements:
+
+1. Framework & Structure:
+- Use React (SPA) with functional components and hooks.
+- Follow the folder and file structure exactly as described in the Implementation Plan:
+  - CalculatorForm.jsx
+  - ModelSelector.jsx
+  - ResultsDisplay.jsx
+  - CostEngine.js
+  - validationEngine.js
+  - constants.js
+  - styles/main.css
+  - App.jsx / main.jsx
+- Include comments referencing SSOT formulas for clarity.
+
+2. Features & Logic:
+- Implement all input fields from CalculatorForm with proper validation (numeric, >=0, required).
+- Implement dropdown selection for AI models using the Model Options from SSOT (prices and providers included).
+- CostEngine must calculate:
+  - Compute_cost
+  - AI_cost
+  - DB_cost
+  - Storage_cost
+  - Bandwidth_cost
+  - Total_monthly_cost
+- Edge cases from SSOT / Test Specifications must be handled (e.g., zero requests or zero tokens).
+- Ensure all calculations are deterministic and match Test Specifications exactly.
+
+3. UI & UX:
+- Responsive and minimalist layout.
+- Show a clear breakdown of costs per component and total monthly cost.
+- Display currency in USD with 2 decimals.
+- Update results instantly (<1 second) after clicking "Calculate Cost".
+
+4. Deployment Readiness:
+- Code must be ready to deploy on Firebase Hosting (index.html, public folder, etc.).
+- Include all configuration necessary for Firebase Hosting deployment.
+- No external credentials are to be included; just prepare deployment-ready code.
+
+5. Output:
+- Generate full React SPA code (all components, services, utils, constants, and styles).
+- Ensure code is complete, runnable locally (`npm install`, `npm start`) and ready for Firebase deploy.
+
+Constraints:
+- Strictly follow SSOT formulas, Implementation Plan structure, and Test Specifications.
+- Do not skip any component or calculation.
+- Do not generate pseudo-code; produce fully executable React code.

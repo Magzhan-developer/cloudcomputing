@@ -1,0 +1,10 @@
+Using the provided System Specification (SSOT), generate a detailed Implementation Plan.
+
+Requirements:
+- Define project structure (folders, modules)
+- List all core components and services
+- Define all required functions based strictly on SSOT formulas
+- Describe data flow from input to output
+- Ensure no deviation from SSOT
+
+Do NOT generate code. Only planning.

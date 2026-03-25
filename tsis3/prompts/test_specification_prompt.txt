@@ -1,0 +1,9 @@
+Using the provided System Specification (SSOT), generate comprehensive Test Specifications.
+
+Requirements:
+- Unit tests for each cost formula
+- Edge case tests (zero, large inputs)
+- Validation tests (invalid inputs)
+- Expected outputs must match SSOT formulas exactly
+
+Ensure mathematical correctness and full coverage.
