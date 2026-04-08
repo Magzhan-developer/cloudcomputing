@@ -1,0 +1,9 @@
+# HR-Flow AI — Python dependencies
+# Install: pip install -r requirements.txt
+
+aiogram==3.13.1              # Telegram Bot framework (async, v3)
+python-dotenv==1.0.1         # .env file loader
+aiosqlite==0.20.0            # Async SQLite driver
+PyMuPDF==1.24.11             # PDF text extraction (fitz)
+google-generativeai==0.8.3   # Google Gemini AI SDK
+google-api-core>=2.0.0       # Google API error types (transitive, pinned for clarity)
