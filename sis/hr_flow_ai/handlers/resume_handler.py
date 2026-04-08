@@ -22,6 +22,7 @@ import tempfile
 from pathlib import Path
 
 from aiogram import Router, F, Bot
+from aiogram.filters import Command
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 
@@ -45,6 +46,11 @@ ALLOWED_MIME_TYPES = {
     "application/pdf",
     "text/plain",
 }
+
+
+@router.message(Command("upload"))
+async def upload_no_state(message: Message):
+    await message.answer("Сначала выберите вакансию через /vacancies, чтобы я знал, по каким критериям оценивать ваше резюме.")
 
 
 # ───────────────────── document upload (PDF / TXT) ──────────────────────
